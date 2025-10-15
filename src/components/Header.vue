@@ -38,7 +38,7 @@ const logout = () => {
 <template>
   <header>
     <div class="header-left">
-      <img src="../assets/images/smileface.png" alt="#" class="logo">
+      <img src="../assets/images/myLogo.png" alt="#" class="logo">
     </div>
 
     <!-- 桌機版選單（永遠顯示） -->
@@ -101,20 +101,18 @@ header {
   height: 70px;
   position: fixed;
   z-index: 1000;
-  background: black;
+  background: #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .header-left {
-  width: 70px;
-  height: 70px;
+  height: 100%;
 }
 
 .header-left img {
-  width: 90%;
-  height: auto;
+  height: 70px;
 }
 
 .header-right ul {
