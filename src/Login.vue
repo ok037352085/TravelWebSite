@@ -23,7 +23,6 @@
 
             const user = userCredential.user;
 
-            //從firebase抓取使用者資料
             const userDocRef = doc(db, "users", user.uid)
             const userDocSnap = await getDoc(userDocRef)
             if(userDocSnap.exists()){

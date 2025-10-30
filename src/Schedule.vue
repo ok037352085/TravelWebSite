@@ -105,7 +105,6 @@
     <div class="head"></div>
     <div class="container">
         <div class="bg-blur" :style="{backgroundImage: selectedImg ? `url(${selectedImg})` : 'none'}"></div>
-        <!-- 左邊：選擇景點 -->
         <div class="left-panel">
             <h2>自訂遊覽順序</h2>
             <select v-model="selectedId">
@@ -122,7 +121,6 @@
             </div>
         </div>
 
-        <!-- 右邊：行程清單(拖曳排序) -->
         <div class="right-panel">
         <h2>我的行程</h2>
         <h3 class="placeholder" v-show="itinerary.length === 0">尚無行程</h3>
@@ -177,7 +175,6 @@
     transition: background-image 0.8s ease-in-out, filter 0.8s ease-in-out;
 }
 
-/* 左邊 */
 .left-panel {
     flex: 2;
     background: rgba(0,0,0,0.5);
@@ -248,7 +245,6 @@ select,::picker(select) {
     background: rgba(0,0,0,1);
 }
 
-/* 右邊 */
 .right-panel {
     background: rgba(0,0,0,0.5);
     flex: 3;
@@ -272,7 +268,6 @@ select,::picker(select) {
     color: #999;
 }
 
-/* 卡片樣式 */
 .spot-card {
     display: flex;
     align-items: center;

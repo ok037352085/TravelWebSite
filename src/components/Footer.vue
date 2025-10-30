@@ -41,7 +41,6 @@
   box-sizing: border-box;
 }
 
-/* 上方社群 */
 .footer-container .footer-top {
   max-width: 800px;
   width: 100%;
@@ -70,12 +69,11 @@
 }
 
 .follow .icon a {
-  font-size: 2rem; /* 代替 zoom，更穩定 */
+  font-size: 2rem;
   cursor: pointer;
   color: #999;
 }
 
-/* 中間導覽連結 */
 .footer-middle {
   max-width: 800px;
   width: 100%;
@@ -86,7 +84,7 @@
   width: 100%;
   list-style: none;
   display: flex;
-  flex-wrap: wrap; /* 小螢幕時換行 */
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 12px;
@@ -107,7 +105,6 @@
   height: 18px;
 }
 
-/* 下方文字 */
 .footer-bottom {
   max-width: 800px;
   width: 100%;
@@ -120,14 +117,13 @@
   margin: 0;
 }
 
-/* ============= RWD ============= */
 @media (max-width: 600px) {
   .footer-middle ul {
-    flex-direction: column; /* 手機改成直式 */
+    flex-direction: column;
     gap: 8px;
   }
   .footer-middle ul span {
-    display: none; /* 手機不顯示分隔線 */
+    display: none;
   }
 }
 </style>

@@ -20,21 +20,17 @@ const register = async() => {
     }
 
     try {
-        // 使用 Firebase Authentication 註冊
         const userCredential = await createUserWithEmailAndPassword(auth, email.value, password.value)
         const firebaseUid = userCredential.user.uid
 
-        // 直接寫入 Firestore
         await setDoc(doc(db, 'users', firebaseUid), {
             nickname: nickname.value,
             username: username.value,
             email: email.value,
             createdAt: new Date()
         })
-
         console.log("firebase寫入成功")
 
-        // 存到 localStorage
         localStorage.setItem('userId', firebaseUid)
         localStorage.setItem('nickname', nickname.value)
         localStorage.setItem('username', username.value)
@@ -130,7 +126,6 @@ const register = async() => {
   }
 }
 
-/* form 外觀一致 */
 form {
   background: #000;
   width: 100%;
@@ -147,7 +142,6 @@ form {
   margin-bottom: 20px;
 }
 
-/* 輸入框 */
 .input-box {
   position: relative;
   width: 100%;
@@ -180,7 +174,6 @@ form {
   color: #aaa;
 }
 
-/* 按鈕 共用樣式 */
 .login-btn,
 .register-btn {
   width: 100%;
@@ -201,7 +194,6 @@ form {
   color: #fff;
 }
 
-/* 連結 */
 .register-link {
   font-size: 14px;
   text-align: center;
@@ -218,7 +210,6 @@ form {
   text-decoration: underline;
 }
 
-/* ============ RWD ============ */
 @media (max-width: 767px) {
   form {
     padding: 20px;

@@ -100,7 +100,7 @@
             </div>
             <h1 >歡迎回來，{{ nickname || '訪客' }}</h1>
             <div class="member">
-                <!-- 收藏景點 -->
+                
                 <div class="member-left">
                     <h2>我的行程安排</h2>
                     <div class="trip-container" v-if="savedItinerary.length > 0">
@@ -119,7 +119,7 @@
                     </div>
                     <p v-else>尚未儲存任何行程</p>
                 </div>
-                <!-- 留言板 -->
+
                 <div class="member-right">
                     <h2>留言板</h2>
                     <textarea v-model="message"></textarea>
@@ -213,7 +213,6 @@
 }
 
 .member-left {
-    /* background: red; */
     display: flex;
     flex-direction: column;
     align-items: center;

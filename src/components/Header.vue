@@ -6,7 +6,7 @@ const router = useRouter()
 const route = useRoute()
 const username = ref("")
 const userId = ref("")
-const isMenuOpen = ref(false) // 預設關閉
+const isMenuOpen = ref(false)
 
 const syncUser = () => {
   username.value = localStorage.getItem("username");
@@ -40,8 +40,6 @@ const logout = () => {
     <div class="header-left">
       <img src="../assets/images/myLogo.png" alt="#" class="logo">
     </div>
-
-    <!-- 桌機版選單（永遠顯示） -->
     <div class="header-right desktop">
       <ul>
         <span></span>
@@ -63,7 +61,6 @@ const logout = () => {
       </ul>
     </div>
 
-    <!-- 手機版選單（漢堡控制顯示） -->
     <div class="header-right mobile" v-if="isMenuOpen">
       <ul>
         <li><router-link to="/" class="link" @click="isMenuOpen = false">首頁</router-link></li>
@@ -81,7 +78,6 @@ const logout = () => {
       </ul>
     </div>
 
-    <!-- 漢堡選單 -->
     <div class="hamburger" @click="isMenuOpen = !isMenuOpen">
       <span></span>
       <span></span>
@@ -146,12 +142,10 @@ header {
   display: block;
 }
 
-/* 桌機版 */
 .desktop {
   display: flex;
 }
 
-/* 手機版 */
 .mobile {
   position: absolute;
   top: 70px;
